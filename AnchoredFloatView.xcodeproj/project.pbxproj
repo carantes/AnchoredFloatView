@@ -73,17 +73,12 @@
 		873D4BBB1A577E760063BF48 /* AnchoredFloatView */ = {
 			isa = PBXGroup;
 			children = (
-				873D4BE61A578B000063BF48 /* Resources */,
-				873D4BE51A578AF10063BF48 /* Helper */,
-				873D4BE41A578AE50063BF48 /* Controller */,
-				873D4BE31A578ADE0063BF48 /* View */,
 				873D4BE21A578AD10063BF48 /* Model */,
-				873D4BC01A577E760063BF48 /* AppDelegate.h */,
-				873D4BC11A577E760063BF48 /* AppDelegate.m */,
-				873D4BC61A577E760063BF48 /* Main.storyboard */,
-				873D4BC91A577E760063BF48 /* Images.xcassets */,
-				873D4BCB1A577E760063BF48 /* LaunchScreen.xib */,
+				873D4BE31A578ADE0063BF48 /* View */,
+				873D4BE41A578AE50063BF48 /* Controller */,
+				873D4BE61A578B000063BF48 /* Resources */,
 				873D4BBC1A577E760063BF48 /* Supporting Files */,
+				873D4BE51A578AF10063BF48 /* Helper */,
 			);
 			name = AnchoredFloatView;
 			path = AnchorFloatView;
@@ -92,6 +87,8 @@
 		873D4BBC1A577E760063BF48 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				873D4BC61A577E760063BF48 /* Main.storyboard */,
+				873D4BCB1A577E760063BF48 /* LaunchScreen.xib */,
 				873D4BBD1A577E760063BF48 /* Info.plist */,
 				873D4BBE1A577E760063BF48 /* main.m */,
 			);
@@ -120,6 +117,7 @@
 		873D4BE41A578AE50063BF48 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				873D4BFF1A5B833D0063BF48 /* AppDelegate */,
 				873D4BF01A578F3A0063BF48 /* ProfileRanking */,
 				873D4BF41A578F6C0063BF48 /* ProfileCell */,
 			);
@@ -136,6 +134,7 @@
 		873D4BE61A578B000063BF48 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				873D4BC91A577E760063BF48 /* Images.xcassets */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -167,6 +166,15 @@
 				873D4BFD1A5843FB0063BF48 /* PaddingLabel.m */,
 			);
 			name = AnchoredFloatView;
+			sourceTree = "<group>";
+		};
+		873D4BFF1A5B833D0063BF48 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				873D4BC01A577E760063BF48 /* AppDelegate.h */,
+				873D4BC11A577E760063BF48 /* AppDelegate.m */,
+			);
+			name = AppDelegate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
