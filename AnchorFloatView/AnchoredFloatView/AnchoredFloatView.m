@@ -12,6 +12,7 @@
 @interface AnchoredFloatView ()
 
 @property (nonatomic, strong) PaddingLabel *messageLabel;
+@property (nonatomic, strong) UIImageView *directionImageView;
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSIndexPath *targetIndexPath;
 
@@ -83,6 +84,16 @@ static const NSInteger DEFAULT_MARGIN_Y = 5;
         
         [_messageLabel.layer setMasksToBounds:YES];
         _messageLabel.layer.cornerRadius = 10.0f;
+        _messageLabel.clipsToBounds = YES;
+        
+        _directionImageView = [[UIImageView alloc] initWithFrame:CGRectMake(5, 2, 20, 20)];
+        
+        [_messageLabel addSubview:_directionImageView];
+        [_messageLabel layoutIfNeeded];
+        
+        [_messageLabel setUserInteractionEnabled:YES];
+        UITapGestureRecognizer *labelTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(floatViewClick:)];
+        [_messageLabel addGestureRecognizer:labelTap];
         
         [self addSubview:_messageLabel];
     }
@@ -92,13 +103,15 @@ static const NSInteger DEFAULT_MARGIN_Y = 5;
 
 - (void)setMessage:(NSString *)message
 {
-    _message = message;
+    
+    //image space
+    _message = [NSString stringWithFormat:@"    %@", message];
     
     
-    NSMutableAttributedString *messageString = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@", message]];
+    NSMutableAttributedString *messageString = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@", _message]];
     
     [messageString addAttributes:@{
-                                   NSFontAttributeName: [UIFont fontWithName:@"HelveticaNeue-medium" size:16],
+                                   NSFontAttributeName: [UIFont fontWithName:@"HelveticaNeue-thin" size:18],
                                    NSForegroundColorAttributeName: [UIColor whiteColor]
                                    }
                            range:NSMakeRange(0, messageString.length)];
@@ -107,15 +120,21 @@ static const NSInteger DEFAULT_MARGIN_Y = 5;
     
     [self.messageLabel sizeToFit];
     
+    CGRect newFrame = self.messageLabel.frame;
+    newFrame.size.height = DEFAULT_HEIGHT;
+    
+    self.messageLabel.frame = newFrame;
+    
     [self.messageLabel setCenter:CGPointMake(self.frame.size.width/2, self.frame.size.height/2)];
     
     [self startSplashAnimation];
 }
 
-- (void)messageButtonClick:(id)sender {
-    [self.layer removeAllAnimations];
-    [self setAlpha:1.f];
-    [self sendActionsForControlEvents:UIControlEventTouchUpInside];
+- (void)floatViewClick:(id)sender {
+    
+    [self.tableView scrollToRowAtIndexPath:self.targetIndexPath
+                         atScrollPosition:UITableViewScrollPositionMiddle
+                                 animated:YES];
 }
 
 - (void)startSplashAnimation {
@@ -184,8 +203,13 @@ static const NSInteger DEFAULT_MARGIN_Y = 5;
     else {
         if (self.alpha == 0) {
             [self setMessage:@"Ir para a linha destacada"];
+            
+            if (self.targetIndexPath.row < startIndexPath.row) {
+                self.directionImageView.image = [UIImage imageNamed:@"arrow_up"];
+            }
+            else
+                self.directionImageView.image = [UIImage imageNamed:@"arrow_down"];
         }
-        
     }
 }
 
