@@ -207,11 +207,11 @@ static const NSInteger DEFAULT_MARGIN_Y = 5;
             UIImage *imageDirection;
             
             if (self.targetIndexPath.row < startIndexPath.row) {
-                message = NSLocalizedString(@"float-view-up-message", nil);
+                message = @"Up to selected row";
                 imageDirection = [UIImage imageNamed:@"arrow_up"];
             }
             else {
-                message = NSLocalizedString(@"float-view-down-message", nil);
+                message = @"Down to selected row";
                 imageDirection = [UIImage imageNamed:@"arrow_down"];
             }
             
