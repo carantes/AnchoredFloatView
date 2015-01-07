@@ -18,6 +18,7 @@
 		873D4BF71A5796D50063BF48 /* ProfileDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 873D4BF61A5796D50063BF48 /* ProfileDataSource.m */; };
 		873D4BFB1A582BFE0063BF48 /* AnchoredFloatView.m in Sources */ = {isa = PBXBuildFile; fileRef = 873D4BFA1A582BFE0063BF48 /* AnchoredFloatView.m */; };
 		873D4BFE1A5843FB0063BF48 /* PaddingLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 873D4BFD1A5843FB0063BF48 /* PaddingLabel.m */; };
+		873D4C021A5CB68E0063BF48 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 873D4C041A5CB68E0063BF48 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,9 @@
 		873D4BFA1A582BFE0063BF48 /* AnchoredFloatView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AnchoredFloatView.m; path = AnchoredFloatView/AnchoredFloatView.m; sourceTree = "<group>"; };
 		873D4BFC1A5843FB0063BF48 /* PaddingLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PaddingLabel.h; path = AnchoredFloatView/PaddingLabel.h; sourceTree = "<group>"; };
 		873D4BFD1A5843FB0063BF48 /* PaddingLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PaddingLabel.m; path = AnchoredFloatView/PaddingLabel.m; sourceTree = "<group>"; };
+		873D4C031A5CB68E0063BF48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		873D4C051A5CB6A80063BF48 /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/Localizable.strings; sourceTree = "<group>"; };
+		873D4C061A5CB6A80063BF48 /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +95,7 @@
 				873D4BCB1A577E760063BF48 /* LaunchScreen.xib */,
 				873D4BBD1A577E760063BF48 /* Info.plist */,
 				873D4BBE1A577E760063BF48 /* main.m */,
+				873D4C041A5CB68E0063BF48 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -218,6 +223,7 @@
 			knownRegions = (
 				en,
 				Base,
+				pt,
 			);
 			mainGroup = 873D4BB01A577E760063BF48;
 			productRefGroup = 873D4BBA1A577E760063BF48 /* Products */;
@@ -235,6 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				873D4BC81A577E760063BF48 /* Main.storyboard in Resources */,
+				873D4C021A5CB68E0063BF48 /* Localizable.strings in Resources */,
 				873D4BCD1A577E760063BF48 /* LaunchScreen.xib in Resources */,
 				873D4BCA1A577E760063BF48 /* Images.xcassets in Resources */,
 			);
@@ -273,8 +280,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				873D4BCC1A577E760063BF48 /* Base */,
+				873D4C061A5CB6A80063BF48 /* pt */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		873D4C041A5CB68E0063BF48 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				873D4C031A5CB68E0063BF48 /* Base */,
+				873D4C051A5CB6A80063BF48 /* pt */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
