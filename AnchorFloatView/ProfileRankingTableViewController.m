@@ -62,9 +62,9 @@
     // Configure the cell...
     cell.profileNameLabel.text = profile.name;
     
-    int orderNumber = indexPath.row+1;
+    NSInteger orderNumber = indexPath.row+1;
     
-    cell.displayOrderLabel.text = [NSString stringWithFormat:@"%2i", orderNumber];
+    cell.displayOrderLabel.text = [NSString stringWithFormat:@"%2li", orderNumber];
     cell.profileImageView.image = [UIImage imageNamed:profile.picture];
     cell.positionLabel.text = profile.position;
     

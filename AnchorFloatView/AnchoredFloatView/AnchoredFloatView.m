@@ -202,13 +202,21 @@ static const NSInteger DEFAULT_MARGIN_Y = 5;
     }
     else {
         if (self.alpha == 0) {
-            [self setMessage:@"Ir para a linha destacada"];
+            
+            NSString *message;
+            UIImage *imageDirection;
             
             if (self.targetIndexPath.row < startIndexPath.row) {
-                self.directionImageView.image = [UIImage imageNamed:@"arrow_up"];
+                message = NSLocalizedString(@"float-view-up-message", nil);
+                imageDirection = [UIImage imageNamed:@"arrow_up"];
             }
-            else
-                self.directionImageView.image = [UIImage imageNamed:@"arrow_down"];
+            else {
+                message = NSLocalizedString(@"float-view-down-message", nil);
+                imageDirection = [UIImage imageNamed:@"arrow_down"];
+            }
+            
+            [self setMessage:message];
+            [self.directionImageView setImage:imageDirection];
         }
     }
 }

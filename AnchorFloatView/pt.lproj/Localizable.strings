@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  AnchoredFloatView
+
+  Created by Carlos Eduardo Arantes Ferreira on 06/01/15.
+  Copyright (c) 2015 Mobistart. All rights reserved.
+*/
+
+"float-view-up-message" = "Subir para linha selecionada";
+"float-view-down-message" = "Descer para linha selecionada";
