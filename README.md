@@ -6,7 +6,7 @@ This is a Float View to indicate the direction and quickly scroll up or down to 
 
 It basically consists of a custom UILabel with one fixed UIImageView inside it, on the left.
 
-![anchoredfloatview](https://cloud.githubusercontent.com/assets/1878740/5639666/eb085a3e-9601-11e4-999e-f49fcd196153.png)
+![anchoredfloatview-preview](https://cloud.githubusercontent.com/assets/1878740/5674917/31940f0e-979a-11e4-94f3-f7c979dcc790.gif)
 
 ## Features
 
